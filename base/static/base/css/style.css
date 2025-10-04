@@ -1,0 +1,130 @@
+/*   font-family: "Original Surfer", sans-serif;   */
+
+/* reset code and common code starts here */
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    list-style-type: none;
+    text-decoration: none ;
+    box-sizing: border-box;
+}
+
+:root{
+    --brand-color: #0BB990;
+    --secondary-color : #fff;
+    --tertiary-color: #1E1E1E;
+    --quaternary-color : #787878;
+    --quinary-color : #585858;
+    --letter-spacing : 0.02rem;
+    --transition : 0.4s ease-in-out;
+    --border-radius : 8px;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* reset code and commoncode ends here */
+
+
+/* nav section starts here */
+.navbar{
+    padding: 0;
+}
+
+.nav-logo__container{
+    height: 50px;
+}
+
+.nav-logo {
+    height: 100%;
+}
+
+.brand-name{
+    color: var(--secondary-color);
+    font-size: 1.30rem;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+}
+
+.nav-logins .d-flex{
+    margin-bottom: 0;
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+.navbar-nav .nav-link{
+    color: var(--secondary-color);
+    font-size: 0.937rem;
+    line-height: 1.625rem;
+    font-weight: 500;
+}
+
+.nav-logins .nav-link{
+    color: var(--secondary-color);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing);
+}
+
+.nav-logins .register-btn {
+    border: 2px solid var(--secondary-color);
+    padding: 0.5rem 1.2rem;
+    border-radius: var(--border-radius);
+    background: transparent;
+    transition: var(--transition);
+}
+
+.nav-logins .register-btn:hover{
+    background-color: var(--secondary-color);
+    color: var(--quinary-color);
+}
+
+.offcanvas{
+    background-color: rgba(10,11,15,.85);
+    width: 320px !important;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.btn{
+    --bs-btn-box-shadow : transparent;
+    --bs-btn-border-width: 0px;
+}
+
+.btn-close {
+    --bs-btn-close-focus-shadow: transparent;
+}
+
+.navbar{
+    --bs-navbar-toggler-border-color: transparent;
+}
+
+.navbar-toggler{
+    line-height: 0;
+}
+
+.fa-bars-staggered{
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.navbar-toggler{
+    background-color: var(--brand-color);
+}
+
+/* nav section ends here */
