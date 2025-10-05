@@ -1,51 +1,60 @@
 /*   font-family: "Original Surfer", sans-serif;   */
 
 /* reset code and common code starts here */
-*{
+* {
     padding: 0;
     margin: 0;
     outline: 0;
     list-style-type: none;
-    text-decoration: none ;
+    text-decoration: none;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --brand-color: #0BB990;
-    --secondary-color : #fff;
+    --secondary-color: #fff;
     --tertiary-color: #1E1E1E;
-    --quaternary-color : #787878;
-    --quinary-color : #585858;
-    --letter-spacing : 0.02rem;
-    --transition : 0.4s ease-in-out;
-    --border-radius : 8px;
+    --quaternary-color: #787878;
+    --quinary-color: #585858;
+    --letter-spacing: 0.02rem;
+    --transition: 0.4s ease-in-out;
+    --border-radius: 8px;
 }
 
-body{
+body {
     font-family: "Inter", sans-serif;
+    font-size: 62.5%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
+.my-btn{
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
 /* reset code and commoncode ends here */
 
 
 /* nav section starts here */
-.navbar{
+.navbar {
     padding: 0;
 }
 
-.nav-logo__container{
+.nav-logo__container {
     height: 40px;
- } 
+}
 
 .nav-logo {
     height: 100%;
 }
 
-.brand-name{
+.brand-name {
     color: var(--secondary-color);
     font-size: 1.30rem;
     line-height: 1;
@@ -56,22 +65,22 @@ html{
     font-style: italic;
 }
 
-.nav-logins .d-flex{
+.nav-logins .d-flex {
     margin-bottom: 0;
 }
 
-.navbar-nav{
+.navbar-nav {
     margin-left: 50px;
 }
 
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
     color: var(--secondary-color);
     font-size: 0.937rem;
     line-height: 1.625rem;
     font-weight: 500;
 }
 
-.nav-logins .nav-link{
+.nav-logins .nav-link {
     color: var(--secondary-color);
     font-size: 1rem;
     line-height: 1.5rem;
@@ -87,26 +96,26 @@ html{
     transition: var(--transition);
 }
 
-.nav-logins .register-btn:hover{
+.nav-logins .register-btn:hover {
     background-color: var(--secondary-color);
     color: var(--quinary-color);
 }
 
-.offcanvas{
-    background-color: rgba(10,11,15,.85);
+.offcanvas {
+    background-color: rgba(10, 11, 15, .85);
     width: 320px !important;
 }
 
-.offcanvas-header{
+.offcanvas-header {
     padding: 2rem;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
     box-shadow: none;
 }
 
-.btn{
-    --bs-btn-box-shadow : transparent;
+.btn {
+    --bs-btn-box-shadow: transparent;
     --bs-btn-border-width: 0px;
 }
 
@@ -114,21 +123,68 @@ html{
     --bs-btn-close-focus-shadow: transparent;
 }
 
-.navbar{
+.navbar {
     --bs-navbar-toggler-border-color: transparent;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     line-height: 0;
 }
 
-.fa-bars-staggered{
+.fa-bars-staggered {
     color: var(--secondary-color);
     font-size: 1.2rem;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     background-color: var(--brand-color);
+    padding: 0.5rem ;
+}
+/* nav section ends here */
+
+
+/* hero section starts here */
+#hero-section {
+    /* background-image: url("../images/hero-banner.webp") ; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,0.4)), url("../images/hero-banner.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
-/* nav section ends here */
+#hero-section .hero-contents{
+    padding: 220px 0px 180px;
+    max-width : 510px;
+}
+
+.hero-heading{
+    font-size: 3.437rem;
+    font-weight: 500;
+    line-height: 4rem;
+    color: var(--secondary-color);
+}
+
+.hero-heading span{
+    font-family: "Original Surfer", sans-serif;
+    color: var(--brand-color);
+}
+
+.hero-description{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    font-weight: 300;
+    letter-spacing: var(--letter-spacing);
+}
+
+.get-started__btn{
+    background-color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+}
+
+.learn-more__btn{
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+/* hero section ends here */
