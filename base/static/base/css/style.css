@@ -38,8 +38,8 @@ html{
 }
 
 .nav-logo__container{
-    height: 50px;
-}
+    height: 40px;
+ } 
 
 .nav-logo {
     height: 100%;
@@ -95,6 +95,10 @@ html{
 .offcanvas{
     background-color: rgba(10,11,15,.85);
     width: 320px !important;
+}
+
+.offcanvas-header{
+    padding: 2rem;
 }
 
 .navbar-toggler:focus{

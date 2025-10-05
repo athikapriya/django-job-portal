@@ -1,8 +1,35 @@
+/* XX-Large screen(>= 1400px) */
+@media screen and (max-width:1400px) {
+
+}
 
 
+/* X-Large screen(>= 1200px) */
+@media screen and (max-width:1200px) {
 
+}
+
+
+/* large screen(>= 992px) */
 @media screen and (max-width:992px) {
     .navbar-nav{
         margin-left: 0px;
     }
+}
+
+
+/* medium screen(>= 768px) */
+@media screen and (max-width:768px) {
+
+}
+
+
+/* samll screen(>= 576px) */
+@media screen and (max-width:576px) {
+
+}
+
+/* extra small screen(>=400px) */
+@media screen and (max-width:400px) {
+
 }
