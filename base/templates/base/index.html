@@ -26,14 +26,14 @@
 </head>
 <body>
 
-    <!-- header starts -->
+    <!-- header starts here -->
     <header>
         <!-- nav starts -->
         <nav class="navbar navbar-expand-lg py-2 bg-secondary">
             <div class="container align-items-center ">
                 <!-- navbar logo -->
-                <a href="index.html" class="nav-logo__container text-decoration-none d-flex align-items-center ">
-                    <img src="{% static 'base/images/talentgo.webp' %}" alt="Logo" class="nav-logo">
+                <a href="{% url 'homepage' %}" class="nav-logo__container text-decoration-none d-flex align-items-center ">
+                    <img src="{% static 'base/images/talentgo.webp' %}" alt="Logo" class="nav-logo me-1">
                     <h1 class="brand-name ">TalentGo</h1>
                 </a>
                 <!-- navbar nav items -->
@@ -72,7 +72,7 @@
                         </ul>
                     </div>
                     <!-- offcanvas toggler -->
-                    <button class="navbar-toggler mx-lg-0 ms-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler mx-lg-0 ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa-solid fa-bars-staggered"></i>
                     </button>
                 </div>
@@ -81,7 +81,25 @@
         </nav>
         <!-- nav ends -->
     </header>
-    <!-- header ends -->
+    <!-- header ends here -->
+
+
+    <!-- main starts here -->
+    <main>
+        <!-- hero starts here -->
+        <section id="hero-section">
+
+        </section>
+        <!-- hero ends here -->
+    </main>
+    <!-- main ends here -->
+
+
+    <!-- footer starts here -->
+    <footer>
+
+    </footer>
+    <!-- footer ends here -->
 
 
     <!-- bootstrap js cdn -->
