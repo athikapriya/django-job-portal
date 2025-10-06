@@ -25,7 +25,6 @@
     <link rel="stylesheet" href="{% static 'base/css/responsive.css' %}">
 </head>
 <body>
-
     <!-- header starts here -->
     <header>
         <!-- nav starts -->
@@ -45,16 +44,19 @@
                     <!-- navbar nav -->
                     <ul class="navbar-nav ms-0  mb-lg-0 text-center justify-content-center justify-content-lg-start ">
                         <li class="nav-item">
-                            <a href="#" class="nav-link mx-0 ms-lg-5 me-lg-2 py-lg-1 mb-1 mt-0 mb-lg-0 ">About Us</a>
+                            <a href="{% url 'homepage' %}" class="nav-link mx-0 ms-lg-5 me-lg-2 py-lg-1 mb-1 mt-0 mb-lg-0 ">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Our Team</a>
+                            <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Post a Job</a>
+                            <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Jobs</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link mx-0 ms-lg-2 me-0 py-lg-1 mb-0 ">Jobs</a>
+                            <a href="#" class="nav-link mx-0 ms-lg-2 me-0 py-lg-1 mb-0 ">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link mx-0 ms-lg-2 me-0 py-lg-1 mb-0 ">Candidates</a>
                         </li>
                     </ul>
                 </div>
@@ -83,15 +85,16 @@
     </header>
     <!-- header ends here -->
 
-
+    
     <!-- main starts here -->
     <main>
+        {% block content %}
         <!-- hero starts here -->
         <section id="hero-section">
             <div class="container">
                 <div class="hero-contents">
-                    <h2 class="hero-heading">Transform Your <span>Freelance</span> Business</h2>
-                    <p class="hero-description mt-2 mt-lg-3">Flourish in a thriving freelance ecosystem dedicated to excellence and limitless opportunities.</p>
+                    <h2 class="hero-heading">Help your team thrive with <span>freelance</span> experts</h2>
+                    <p class="hero-description mt-2 mt-lg-3">Company reviews. Salaries. Interviews. Jobs.</p>
                     <div class="hero-buttons d-flex mt-4 mt-lg-4">
                         <a href="#" class="text-decoration-none my-btn get-started__btn me-4 ">Get Started <i class="fa-solid fa-arrow-right-to-bracket"></i> </a>
                         <a href="#" class="text-decoration-none my-btn learn-more__btn">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
@@ -102,21 +105,31 @@
         <!-- hero ends here -->
 
         <!-- infinite loop starts here -->
-        <section id="infinite-loop">
-            <div class="logo-slider">
-                <div class="logo-track">
-                    <img src="{% static 'base/images/logo-visa.svg' %}" alt="Visa Logo">
-                    <img src="{% static 'base/images/logo-abbott.svg' %}" alt="Abbott Logo">
-                    <img src="{% static 'base/images/logo-addidas.svg' %}" alt="Addidas Logo">
-                    <img src="{% static 'base/images/logo-fedex.svg' %}" alt="Fedex Logo">
-                    <img src="{% static 'base/images/logo-google.svg' %}" alt="Google Logo">
-                    <img src="" alt="">
+        <section id="infinite-loop" class="section-padding">
+            <div class="container-fluid">
+                <div class="logo-slider">
+                    <div class="logo-overflow d-flex">
+                        <div class="logo-wrapper d-flex">
+                            {% for logo in logos %}
+                                <div class="logo-item">
+                                    <img src="{% static logo %}" alt="Logo">
+                                </div>
+                            {% endfor %}
+                            {% for logo in logos %}
+                                <div class="logo-item">
+                                    <img src="{% static logo %}" alt="Logo">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- infinite loop ends here -->
     </main>
+    {% endblock %}
     <!-- main ends here -->
+    
 
 
     <!-- footer starts here -->
