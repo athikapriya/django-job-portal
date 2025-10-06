@@ -30,6 +30,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.section-padding{
+    padding: 40px 0px;
+}
+
 .my-btn{
     padding: 0.8rem 1.5rem;
     border-radius: var(--border-radius);
@@ -145,7 +149,6 @@ html {
 
 /* hero section starts here */
 #hero-section {
-    /* background-image: url("../images/hero-banner.webp") ; */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0,0.4)), url("../images/hero-banner.webp");
     background-repeat: no-repeat;
     background-position: center center;
@@ -188,3 +191,38 @@ html {
 }
 
 /* hero section ends here */
+
+
+/* infinite loop starts here */
+
+.logo-slider{
+    overflow-x: hidden;
+}
+
+.logo-overflow{
+    overflow: hidden;
+}
+
+.logo-wrapper{
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    animation: LogoLoop 15s linear infinite;
+    width: max-content;
+}
+
+.logo-item{
+    display: grid;
+    place-items: center;
+    aspect-ratio: 30/9;
+}
+
+@keyframes LogoLoop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* infinite loop ends here */
