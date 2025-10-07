@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
     <!-- responsive css -->
     <link rel="stylesheet" href="{% static 'base/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/responsive.css' %}?v=2">
 </head>
 <body>
     <!-- header starts here -->
@@ -47,7 +48,7 @@
                             <a href="{% url 'homepage' %}" class="nav-link mx-0 ms-lg-5 me-lg-2 py-lg-1 mb-1 mt-0 mb-lg-0 ">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Categories</a>
+                            <a href="{% url 'jobs_by_category' %}" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link mx-0 mx-lg-2 py-lg-1   mb-lg-0 ">Jobs</a>
@@ -105,7 +106,7 @@
         <!-- hero ends here -->
 
         <!-- infinite loop starts here -->
-        <section id="infinite-loop" class="section-padding">
+        <section id="infinite-loop">
             <div class="container-fluid">
                 <div class="logo-slider">
                     <div class="logo-overflow d-flex">
@@ -126,6 +127,31 @@
             </div>
         </section>
         <!-- infinite loop ends here -->
+
+        <!-- top categories starts here -->
+        <section id="top-categories" class="section-padding">
+            <div class="container">
+               <div class="row">
+                    <h3 class="section-heading">Top categories</h3>
+                    <p class="section-description">Easily find the right service from over 2000+ skills</p>
+                </div>
+                <!-- slider categories starts -->
+                <div class="row">
+                    {% for category in top_categories %}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 category-box text-center">
+                            <img src="{% static category.image %}" alt="{{ category.name }}" class="img-fluid">
+                            <div class="overlay">
+                                <h4 class="category-name">{{ category.name }}</h4>
+                                <p class="jobs-available">{{ category.jobs_available }} Jobs Available</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                </div>
+                <!-- slider categories ends -->
+            </div>
+        </section>
+        <!-- top categories ends here -->
+
     </main>
     {% endblock %}
     <!-- main ends here -->
@@ -138,10 +164,11 @@
     </footer>
     <!-- footer ends here -->
 
-
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- bootstrap js cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <!-- my js -->
-    <script src="{% static 'base/js/script.js' %}"></script>
+    <script src="{% static 'base/js/top_categories_slider.js' %}"></script>
 </body>
 </html>
