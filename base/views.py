@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def home_page(request):
+    # logos for infinite loop
     logos = [
         'base/images/logo-visa.svg',
         'base/images/logo-toyota.svg',
@@ -12,4 +13,44 @@ def home_page(request):
         'base/images/logo-abbott.svg',
         'base/images/logo-fedex.svg',
     ]
-    return render(request, "base/index.html", {"logos" : logos})
+
+    # top categories for jobs
+    top_categories = [
+        {
+            "name" : "Web Development",
+            "image" : "base/images/category-development.webp",
+            "jobs_available" : 17
+        },
+        {
+            "name" : "UX/UI Design",
+            "image" : "base/images/category-ux_ui.webp",
+            "jobs_available" : 8
+        },
+        {
+            "name" : "Data Science",
+            "image" : "base/images/category-data-science.webp",
+            "jobs_available" : 9
+        },
+        {
+            "name" : "Smart AI Services",
+            "image" : "base/images/category-AI.webp",
+            "jobs_available" : 7
+        },
+        {
+            "name" : "Digital Marketing",
+            "image" : "base/images/category-digital marketing.webp",
+            "jobs_available" : 12
+        },
+        {
+            "name" : "Mobile App Development",
+            "image" : "base/images/category-mobile-app.webp",
+            "jobs_available" : 8
+        }
+    ]
+
+    context = {
+        "logos" : logos,
+        "top_categories" : top_categories
+    }
+
+    return render(request, "base/index.html", context)
