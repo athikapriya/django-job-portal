@@ -7,6 +7,15 @@
 /* X-Large screen(>= 1200px) */
 @media screen and (max-width:1200px) {
 
+    /* common code */
+    .section-heading{
+        font-size: 2rem;
+    }
+
+    /* top categories */
+    #top-categories .overlay{
+        width: 89%;
+    }
 }
 
 
@@ -16,6 +25,10 @@
     /* common code */
     .my-btn{
         padding: 0.72rem 1.2rem;
+    }
+
+    .section-heading{
+        font-size: 1.75rem ;
     }
 
     /* navbar */
@@ -44,6 +57,10 @@
         padding: 0.62rem 1.1rem;
     }
 
+    .section-description{
+        font-size: 1rem;
+    }
+
     /* hero-section */
     #hero-section .hero-contents{
         padding: 220px 0px 140px;
@@ -54,11 +71,20 @@
         font-size: 1.1rem;
     }
 
+    /* top categories */
+    #top-categories .overlay{
+        width: 91%;
+    }
 }
 
 
 /* samll screen(>= 576px) */
 @media screen and (max-width:576px) {
+
+    /* common code */
+    .section-heading{
+        font-size: 1.65rem ;
+    }
 
     /* nav-logins display:none */
     .nav-logins{
@@ -73,6 +99,16 @@
 
     .hero-description{
         line-height: 1.65rem;
+    }
+
+    /* top categories */
+    .category-box img{
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    #top-categories .overlay{
+        width: 75%;
     }
 }
 
