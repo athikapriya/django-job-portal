@@ -42,6 +42,21 @@ html {
     font-weight: 500;
     line-height: 1.5rem;
 }
+
+.section-heading{
+    font-weight: 600;
+    font-size: 2.125rem;
+    line-height: 2.75rem;
+    color: var(--tertiary-color);
+}
+
+.section-description{
+    font-weight: 400;
+    font-size: 1.12rem;
+    line-height: 1.625rem;
+    color: var(--quaternary-color);
+}
+
 /* reset code and commoncode ends here */
 
 
@@ -198,6 +213,9 @@ nav{
 
 
 /* infinite loop starts here */
+#infinite-loop{
+    padding-top: 40px;
+}
 
 .logo-slider{
     overflow-x: hidden;
@@ -230,3 +248,65 @@ nav{
     }
 }
 /* infinite loop ends here */
+
+
+/* top category starts here */
+
+.category-box{
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 92%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin: 0px auto;
+
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.30);
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+
+.category-box img{
+    border-radius: 15px;
+
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-name{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+
+    z-index: 3;
+    position: relative;
+    margin: 0;
+}
+
+.jobs-available{
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+
+    z-index: 3;
+    position: relative;
+    margin: 0;
+}
+/* top category ends here */
