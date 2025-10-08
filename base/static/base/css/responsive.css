@@ -12,10 +12,6 @@
         font-size: 2rem;
     }
 
-    /* top categories */
-    #top-categories .overlay{
-        width: 89%;
-    }
 }
 
 
@@ -71,10 +67,7 @@
         font-size: 1.1rem;
     }
 
-    /* top categories */
-    #top-categories .overlay{
-        width: 91%;
-    }
+    
 }
 
 
@@ -99,16 +92,6 @@
 
     .hero-description{
         line-height: 1.65rem;
-    }
-
-    /* top categories */
-    .category-box img{
-        width: 80%;
-        margin: 0px auto;
-    }
-
-    #top-categories .overlay{
-        width: 75%;
     }
 }
 
